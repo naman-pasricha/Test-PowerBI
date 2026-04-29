@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Analysis Dashboard | Power BI Report</title>
+    <meta name="description" content="Interactive Investment Analysis Dashboard built with Power BI. Explore financial insights, portfolio performance, and investment trends.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Hero Section with Background Screenshot -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="assets/dashboard-bg.png" alt="Investment Analysis Dashboard Preview" />
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="badge">
+                <span class="badge-dot"></span>
+                <span>Live Dashboard</span>
+            </div>
+            <h1>Investment Analysis</h1>
+            <p class="hero-subtitle">
+                Explore interactive financial insights, portfolio performance metrics, and investment trend analysis — powered by Power BI.
+            </p>
+            <a href="#dashboard" class="cta-button" id="cta-explore">
+                <span>Explore Dashboard</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 17l9.2-9.2M17 17V7H7"/>
+                </svg>
+            </a>
+        </div>
+        <div class="scroll-indicator" id="scroll-indicator">
+            <div class="mouse">
+                <div class="mouse-wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar" id="stats-bar">
+        <div class="stat-item">
+            <span class="stat-icon">📊</span>
+            <div>
+                <span class="stat-value">Real-Time</span>
+                <span class="stat-label">Data Analytics</span>
+            </div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+            <span class="stat-icon">💹</span>
+            <div>
+                <span class="stat-value">Interactive</span>
+                <span class="stat-label">Visualizations</span>
+            </div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+            <span class="stat-icon">🎯</span>
+            <div>
+                <span class="stat-value">Deep Dive</span>
+                <span class="stat-label">Investment Insights</span>
+            </div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+            <span class="stat-icon">🔒</span>
+            <div>
+                <span class="stat-value">Secure</span>
+                <span class="stat-label">Power BI Embedded</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section class="dashboard-section" id="dashboard">
+        <div class="section-header">
+            <span class="section-tag">Interactive Report</span>
+            <h2>Power BI Dashboard</h2>
+            <p class="section-desc">
+                Click, filter, and drill through the data below. This is a fully interactive Power BI report — hover over charts for details and use slicers to customize your view.
+            </p>
+        </div>
+        <div class="dashboard-wrapper">
+            <div class="dashboard-glow"></div>
+            <div class="dashboard-frame" id="dashboard-frame">
+                <div class="loading-state" id="loading-state">
+                    <div class="loader">
+                        <div class="loader-ring"></div>
+                        <div class="loader-ring"></div>
+                        <div class="loader-ring"></div>
+                    </div>
+                    <p>Loading Dashboard...</p>
+                </div>
+                <iframe 
+                    id="powerbi-iframe"
+                    title="Investment Analysis - Power BI Report"
+                    src="https://app.powerbi.com/reportEmbed?reportId=a72875b0-b8ef-49da-b33d-620f963c82a6&autoAuth=true&ctid=8f46fd34-c9b7-4237-867c-87a7c47f1183&actionBarEnabled=true"
+                    frameborder="0" 
+                    allowFullScreen="true"
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+        <div class="dashboard-tips">
+            <div class="tip" id="tip-filter">
+                <div class="tip-icon">🔍</div>
+                <h4>Filter Data</h4>
+                <p>Use slicers and filters to narrow down specific time periods or categories.</p>
+            </div>
+            <div class="tip" id="tip-hover">
+                <div class="tip-icon">👆</div>
+                <h4>Hover for Details</h4>
+                <p>Hover over any chart element to see detailed tooltips with precise values.</p>
+            </div>
+            <div class="tip" id="tip-drill">
+                <div class="tip-icon">🔎</div>
+                <h4>Drill Through</h4>
+                <p>Right-click data points to drill through to more detailed analysis views.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Investment Analysis</h3>
+                <p>Built with Power BI &amp; deployed on GitHub Pages</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/naman-pasricha/Test-PowerBI" target="_blank" rel="noopener noreferrer" id="link-github">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                    <span>GitHub Repository</span>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Naman Pasricha. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
