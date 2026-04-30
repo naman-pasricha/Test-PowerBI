@@ -786,3 +786,15 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* ========== CUSTOM CURSOR ========== */
+@media (min-width: 1024px) {
+    html, body {
+        cursor: url('assets/custom-cursor.png') 0 0, auto;
+    }
+    
+    a, button, .cta-button, .carousel-arrow, .carousel-dot, iframe {
+        cursor: url('assets/custom-cursor.png') 0 0, pointer;
+    }
+}
+
