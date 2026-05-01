@@ -515,8 +515,8 @@ body {
 
 .linkedin-card {
     position: relative;
-    flex: 0 0 min(302px, 70vw);
-    height: 500px; /* Collapsed height */
+    flex: 0 0 min(320px, 75vw);
+    height: 520px; /* Consistent height */
     scroll-snap-align: center;
     background: var(--bg-card);
     border: 1px solid var(--glass-border);
@@ -525,6 +525,8 @@ body {
     backdrop-filter: blur(16px);
     transition: all 0.4s var(--transition);
     box-shadow: var(--shadow-lg);
+    display: flex;
+    flex-direction: column;
 }
 
 .linkedin-card:hover {
@@ -552,12 +554,63 @@ body {
     100% { background-position: -200% center; }
 }
 
-.linkedin-card iframe {
+.linkedin-image-container {
     width: 100%;
-    height: 100%; /* Fill the collapsed card */
-    border: none;
-    display: block;
-    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    height: 320px;
+    overflow: hidden;
+    background: #000;
+}
+
+.linkedin-post-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Crop to fit, showing the main visual */
+    transition: transform 0.5s var(--transition);
+}
+
+.linkedin-card:hover .linkedin-post-image {
+    transform: scale(1.05);
+}
+
+.linkedin-text-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(180deg, transparent 0%, rgba(10, 14, 26, 0.2) 100%);
+}
+
+.linkedin-text-content p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limit to 3 lines as requested */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.linkedin-post-link {
+    display: inline-flex;
+    align-items: center;
+    color: #0a66c2;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    gap: 6px;
+    transition: all 0.3s var(--transition);
+}
+
+.linkedin-post-link:hover {
+    color: var(--accent-end);
+    gap: 10px;
+}
+
+.linkedin-post-link::after {
+    content: '→';
+    font-size: 1.1rem;
 }
 
 /* Carousel Navigation Arrows */
